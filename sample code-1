@@ -1,0 +1,30 @@
+# includde<stdio.h>
+# include<conio.h>
+
+
+
+int Pno,no,ct,bt[10],at[10],tq,rp;
+int rt[10];
+int x=1;
+int wait=0;
+int indicator=0;
+int tt=0;
+
+printf("enter the no of processors");
+scanf("%d",&no);
+rp=no;
+
+printf("enter ther burst time and arrival time");
+for(Pno=0;Pno<no;Pno++)
+
+{
+printf("Process p",Pno+1);
+//arival time
+printf("arival time=  ");
+scanf("%d",&at[Pno]);
+
+}
+
+//tim,e quantum for first is 3
+
+
