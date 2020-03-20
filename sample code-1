@@ -25,6 +25,28 @@ scanf("%d",&at[Pno]);
 
 }
 
-//tim,e quantum for first is 3
+printf("details of time quantum are as follows:\n ");
+printf("the time quantum of first round is 3");
+tq=3;
+ct=0;
+
+
+for(pno=0;Rempro!=0)
+{
+
+ct+=rem[pno];
+
+rem[pno]=0;
+
+indicator=1;
+
+
+}
+
+
+
+
+
+
 
 
