@@ -1,9 +1,12 @@
 # includde<stdio.h>
 # include<conio.h>
 
+void rr(int no,int rt[10],int ct,int at[10],int bt[10]);
+main()
+{  
 
-
-int Pno,no,ct,bt[10],at[10],tq,rp;
+  
+int Pno,no,ct,bt[10],at[10],tq,rp,j;
 int rt[10];
 int x=1;
 int wait=0;
@@ -79,14 +82,59 @@ return 0;
 
 }void rr(int no,int r_t[10],c_t,int a_t[10],int b_t[10])
 {
+float av_wt,av_tut;
+int i,j,n=no,temp,bti[20],Pno[20],wti[20],tu_t[20],total=0,pos;
+printf("round three:");
+printf("least burst time");
 
+for(i=o;i<n;i++)
+{
+bti[i]=r_t[i];
+wti[i]=c_t-at[i]-bti[i];
+Pno[i]=i+1;
+}
 
+for(i=0;i<n;i++)
+{
+
+pos=i;
+for(j=i+1;j<n;j++)
+{
+      if(bti[j]<bti[loc]){
+          loc=j;
+      }
+}
+temp=bti[i];
+bti[i]=bti[pos];
+bti[los]=temp;
+temp=Pno[i];
+Pno[i]=Pno[pos];
+Pno[pos]=temp;
+}
+  for(i=1;i<n;i++){
+      for(j=0;j<i;j++){
+          wti[i]+=bti[j];
+          
+      }
+      total+=wti[i];
+  }
+av_wt=(float)total/n;
+total=0;
+printf("\nProcess\t\t Burst Time\t\twating time\t\tTurnaround Time");
+for(i=0;i<n;i++)
+{
+ tu_t[i]=bti[i]+wti;
+ total=total+tu_t[i];
+ printf("\nP%d\t\t\t%d\t\t\t%d\t\t\t%d",Pno[i],bti[i],wti[i],tu_t[i]);
+}
+av_wt=(float)total/n;
+printf("\n\nAverage wating time=%f",av_wt);
+printf("\n Average turnaround time=%f\n",av_wt);
 }
 
 
 
 
 
-
-
+}
 
